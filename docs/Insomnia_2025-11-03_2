@@ -1,0 +1,284 @@
+type: collection.insomnia.rest/5.0
+name: lojaEspricio
+meta:
+  id: wrk_175d09ab0de1418ea9a2e9aab77c9a10
+  created: 1760985157887
+  modified: 1760985157887
+  description: ""
+collection:
+  - name: Produtos
+    meta:
+      id: fld_a4231fc49e4f40d197fa7ee8fedd872d
+      created: 1761583603531
+      modified: 1761583714942
+      sortKey: -1761583603559.125
+      description: ""
+    children:
+      - url: localhost:8081/produtos
+        name: Inserir produto
+        meta:
+          id: req_a5e1c2b77c134eddaad52a57f8f643c8
+          created: 1760985164139
+          modified: 1762167154413
+          isPrivate: false
+          description: ""
+          sortKey: -1761589099638
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "teclado gamer arco iris",
+            	"valor": 560
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos
+        name: Seleciona todos produtos
+        meta:
+          id: req_255be0605d3b4525a6f6aa6ad40f311c
+          created: 1761564594390
+          modified: 1761589129089
+          isPrivate: false
+          description: ""
+          sortKey: -1761589099538
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/7
+        name: Selecionar produto por ID
+        meta:
+          id: req_71b3f7d4829c4c7394bf262386b067fe
+          created: 1761564606709
+          modified: 1762167175158
+          isPrivate: false
+          description: ""
+          sortKey: -1761589099438
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/7
+        name: atualizar produto
+        meta:
+          id: req_f5e6f7511c424fb7ae1fa6925f08f45d
+          created: 1761568839435
+          modified: 1762167188036
+          isPrivate: false
+          description: ""
+          sortKey: -1761589099338
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Teclado gamer iris",
+            	"valor": 150
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/3
+        name: excluir produto
+        meta:
+          id: req_8edae9cc3f124231998f6758288c8352
+          created: 1761581420957
+          modified: 1761589178199
+          isPrivate: false
+          description: ""
+          sortKey: -1761589099738
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Clientes
+    meta:
+      id: fld_4f6e989a22764ead967a052bbdda14ec
+      created: 1761589271635
+      modified: 1761589271635
+      sortKey: -1761589271635
+      description: ""
+    children:
+      - url: localhost:8081/clientes
+        name: adicionar clientes
+        meta:
+          id: req_68323a40d926448793f2478b2eeb160f
+          created: 1761589277536
+          modified: 1762167230327
+          isPrivate: false
+          description: ""
+          sortKey: -1761589277536
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Davi",
+            	"cpf": "122312318"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/clientes
+        name: buscar todos clientes
+        meta:
+          id: req_475a5e46e3414580839f1389e406fbd6
+          created: 1761590988788
+          modified: 1761591013087
+          isPrivate: false
+          description: ""
+          sortKey: -1761589277636
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/clientes/
+        name: buscar cliente por ID
+        meta:
+          id: req_09c832fd391a434cb38da276a92f8e62
+          created: 1762194960850
+          modified: 1762195117177
+          isPrivate: false
+          description: ""
+          sortKey: -1762194960850
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/clientes/7
+        name: editar dados do cliente
+        meta:
+          id: req_74fa5515418f4264840e4531f685fee4
+          created: 1762195610619
+          modified: 1762195912644
+          isPrivate: false
+          description: ""
+          sortKey: -1762195610619
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |+
+            {
+            	"nome": "Raissa",
+            	"cpf":"12345678901"
+            }
+
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/clientes/1
+        name: excluir cliente
+        meta:
+          id: req_0fa485e69c024ed28ad38f0cbe05fd5c
+          created: 1762196378588
+          modified: 1762196417310
+          isPrivate: false
+          description: ""
+          sortKey: -1762196378588
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_32409415710448806c3def1c333c8fb138ef7968
+    created: 1760985157902
+    modified: 1760985157902
+environments:
+  name: Base Environment
+  meta:
+    id: env_32409415710448806c3def1c333c8fb138ef7968
+    created: 1760985157896
+    modified: 1760985157896
+    isPrivate: false
